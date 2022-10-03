@@ -31,4 +31,4 @@ function main(a, b) {
   else return false;
 }
 
-console.log(main(-4.3, -4.2));
+console.log(main(1, 4));
