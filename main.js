@@ -1,3 +1,4 @@
+// kisman metod
 function f(x) {
   return Math.pow(x, 5) - 5 * x - 22;
 }
@@ -15,20 +16,23 @@ console.log(func(1, 4, Math.pow(10, -3)));
 
 /////////////////////
 
-function fn(x) {
-  return 5 * x + 22;
+//metod iteracii
+
+function f(x){
+    return Math.pow(x, 4) - 8 * Math.pow(x, 2) + 6 * x + 7; 
 }
 
-function derivative(n) {
-  const deg = -0.8;
-  return Math.pow(fn(n), deg);
+function g(x){
+    const alpha = 101.25
+    return x + f(x) / alpha;
 }
 
-function main(a, b) {
-  const mid = a + b / 2;
+function main(x = -4, xnext = g(x), eps){
 
-  if (Math.abs(derivative(mid)) < 1) return true;
-  else return false;
+    while(Math.abs(xnext - x) > eps){
+        x = xnext;
+        xnext = g(xnext);
+    }
+    
+    return xnext;
 }
-
-console.log(main(1, 4));
