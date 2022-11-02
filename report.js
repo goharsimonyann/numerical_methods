@@ -7,10 +7,10 @@ let stepDivision = 0,
 function divisionMethod(a, b, eps) {
   let c = a + b / 2;
   ++stepDivision;
-  if (Math.abs(division_func(c)) < eps) return c;
-  if (division_func(a) * division_func(c) < 0) return divisionMethod(a, c, eps);
+  if (Math.abs(f(c)) < eps) return c;
+  if (f(a) * f(c) < 0) return divisionMethod(a, c, eps);
 
-  return divisionMethod(c, b, eps);
+  return f(c, b, eps);
 }
 //  iteration method
 function iterationMethod(x, xnext, eps) {
@@ -96,7 +96,7 @@ console.log(
 
 
 
-function division_func(x) {
+function f(x) {
   return Math.pow(x, 5) - 5 * x - 22;
 }
 
