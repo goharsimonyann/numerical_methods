@@ -38,12 +38,12 @@ function newtonMethod(x, eps) {
 function chordMethod(xn, xnext, eps) {
   let save = 0;
 
-  while (Math.abs(division_func(xnext)) > eps) {
+  while (Math.abs(f(xnext)) > eps) {
     save = xnext;
     xnext =
       xnext -
-      (division_func(xnext) * (xnext - xn)) /
-        (division_func(xnext) - division_func(xn));
+      (f(xnext) * (xnext - xn)) /
+        (f(xnext) - f(xn));
     xn = save;
     ++stepChord;
   }
