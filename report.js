@@ -53,7 +53,7 @@ function chordMethod(xn, xnext, eps) {
 
 console.log(
   "division method --> ",
-  divisionMethod(0.5, 1, Math.pow(10, -3)),
+  divisionMethod(1, 4, Math.pow(10, -3)),
   "steps --> ",
   stepDivision
 );
