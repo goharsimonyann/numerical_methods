@@ -42,5 +42,3 @@ console.log("Leftside Rec method: ", leftRec());
 console.log("Rightside Recmethod: ", rightRec());
 console.log("Middle Rec method: ", middleRec());
 console.log("Trapezodial method: ", trapezodialMethod());
-
-.
