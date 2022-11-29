@@ -1,0 +1,29 @@
+function f(x) {
+  return Math.pow(x, 4);
+}
+
+function left() {
+  const a = 0, b = 1, n = 23, h = (b - a) / n;
+  let result = 0;
+  for (let i = 0; i <= n - 1; ++i) result += f(a + i * h);
+  return result * h;
+}
+
+function right() {
+   const a = 0, b = 1, n = 23, h = (b - a) / n;
+   let result = 0;
+  for (let i = 1; i <= n; ++i) result += f(a + i * h);
+  return result * h ;
+}
+
+function middle() {
+  const a = 0, b = 1, n = 23, h = (b - a) / n;
+  let result = 0;
+  
+  for (let i = 0; i < n; ++i) result += f(((a + i * h) + (a + (i + 1) * h)) / 2);
+  return result * h;
+}
+
+console.log("Left side method: ", left());
+console.log("Right side method: ", right());
+console.log("Middle method: ", middle());
